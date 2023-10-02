@@ -16,7 +16,7 @@
         <div class="container">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">Cairocoders</a>
+                <a class="nav-link" href="#">BOOKSTORE</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link active" href="{{ url('/home') }}">Home</a>
@@ -28,10 +28,15 @@
         <a class="btn btn-outline-dark" href="{{ route('shopping.cart') }}">
             <i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart <span class="badge bg-danger">{{ count((array) session('cart')) }}</span>
         </a>
+        <form action="{{ route('logout') }}" method="POST" class="d-flex" role="search">
+            @csrf
+            @method('DELETE')
+            <button class="btn btn-danger" type="submit">Logout</button>
+        </form>
       </div>
     </nav>
     <div class="container mt-4">
-        <h2 class="mb-3">Laravel Add To Shopping Cart</h2>
+        <h2 class="mb-3">BookStore</h2>
         @if(session('success'))
             <div class="alert alert-success">
               {{ session('success') }}

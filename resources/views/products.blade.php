@@ -1,4 +1,3 @@
-//resources/views/products.blade.php
 @extends('shop')
 
 @section('content')
