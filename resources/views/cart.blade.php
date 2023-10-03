@@ -1,5 +1,6 @@
-@extends('shop')
 
+@extends('shop')
+   
 @section('content')
 <table id="cart" class="table table-bordered">
     <thead>
@@ -18,7 +19,7 @@
                 <tr rowId="{{ $id }}">
                     <td data-th="Product">
                         <div class="row">
-                            <div class="col-sm-3 hidden-xs"><img src="{{ $details['image'] }}" class="card-img-top"/></div>
+                            <div class="col-sm-3 hidden-xs"><img src="/images/{{ $details['image'] }}" class="card-img-top"/></div>
                             <div class="col-sm-9">
                                 <h4 class="nomargin">{{ $details['name'] }}</h4>
                             </div>
@@ -83,6 +84,6 @@
             });
         }
     });
-
-</table>
+   
+</script>
 @endsection
